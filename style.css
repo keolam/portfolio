@@ -164,17 +164,36 @@ header .logo {
 	color: #03a9f4;
 }
 #works {
+	position: relative;
+	z-index: 10;
 	display: flex;
-	flex-direction: row;
+	/*	flex-wrap: nowrap;*/
+	justify-content: space-between;
 	margin-bottom: 30px;
+	opacity: 0.9;
+	background-color: black;
 }
+.site-column {
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	/*max-width: min-content;*/
+	justify-content: center;
+}
+.photo-box {
+	justify-content: center;
+}
+
 .link-pic {
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
 	margin: 4px;
 	transform: scale(1);
 }
 .about {
 	width: 100%;
-	background: black;
+	/*background: black;*/
 	color: white;
 }
 @media (max-width: 991px) {
@@ -187,5 +206,24 @@ header .logo {
 	}
 	.text h3 {
 		font-size: 2em;
+	}
+	#works {
+		flex-direction: column;
+		justify-content: center;
+		max-width: 10%;
+	}
+	.photo-box a {
+		justify-content: center;
+	}
+	img {
+		justify-content: center;
+	}
+	.about {
+		width: 80%;
+	}
+	.site-column {
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
