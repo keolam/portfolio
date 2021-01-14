@@ -19,7 +19,6 @@ header {
 header .logo {
 	color: #fff;
 	text-transform: uppercase;
-	cursor: pointer;
 }
 .toggle {
 	position: relative;
@@ -137,7 +136,7 @@ header .logo {
 }
 
 .social li a:hover {
-	transform: scale(0.5) translateY(-15px);
+	transform: scale(0.4) translateY(-15px);
 }
 .menu {
 	position: absolute;
@@ -167,35 +166,84 @@ header .logo {
 	position: relative;
 	z-index: 10;
 	display: flex;
-	/*	flex-wrap: nowrap;*/
+	flex-direction: row;
 	justify-content: space-between;
-	margin-bottom: 30px;
-	opacity: 0.9;
-	background-color: black;
+	margin-bottom: 40px;
+	padding: 8px;
 }
 .site-column {
 	background-color: black;
 	display: flex;
 	flex-direction: column;
-	/*max-width: min-content;*/
+	max-width: min-content;
 	justify-content: center;
+	opacity: 0.8;
+	border-radius: 10px;
+	padding-bottom: 10px;
 }
 .photo-box {
 	justify-content: center;
 }
-
+.photo-box img {
+	transform: scale(1);
+	transition: 0.2s;
+	z-index: 10;
+	opacity: 1;
+}
+.photo-box img:hover {
+	transform: scale(1.05);
+}
 .link-pic {
 	display: flex;
 	justify-content: center;
-	/*align-items: center;*/
-	margin: 4px;
+	align-items: center;
+	margin: 5px;
 	transform: scale(1);
 }
 .about {
 	width: 100%;
-	/*background: black;*/
+	height: 4em;
+	text-align: left;
 	color: white;
+	margin: 7.5px;
+	margin-bottom: 20px;
+	padding-right: 10px;
+	font-size: 0.7em;
 }
+.code-link {
+	align-self: center;
+	transform: scale(1);
+	transition: 0.2s;
+	z-index: 10;
+}
+.code-link:hover {
+	transform: scale(1.05);
+}
+
+.code-link img {
+	max-width: 2em;
+	filter: invert(1);
+}
+.code-link a {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 7em;
+	text-decoration: none;
+	text-align: center;
+	border: solid;
+	padding: 0.5em;
+	border-width: 0.5px;
+	background-color: rgb(29, 26, 26);
+	color: white;
+	border-radius: 4px;
+}
+.code-link a h6 {
+	font-size: 0.2em;
+	font-weight: 400;
+	padding-top: 10px;
+}
+
 @media (max-width: 991px) {
 	.showcase,
 	.showcase header {
@@ -210,7 +258,7 @@ header .logo {
 	#works {
 		flex-direction: column;
 		justify-content: center;
-		max-width: 10%;
+		/*max-width: 10%;*/
 	}
 	.photo-box a {
 		justify-content: center;
