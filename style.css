@@ -206,7 +206,7 @@ header .logo {
 	text-align: left;
 	color: white;
 	margin: 7.5px;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 	padding-right: 10px;
 	font-size: 0.7em;
 }
@@ -221,27 +221,29 @@ header .logo {
 }
 
 .code-link img {
-	max-width: 2em;
+	max-width: 1em;
+	max-height:1em;
 	filter: invert(1);
 }
 .code-link a {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	width: 7em;
 	text-decoration: none;
 	text-align: center;
 	border: solid;
 	padding: 0.5em;
 	border-width: 0.5px;
-	background-color: rgb(29, 26, 26);
+	background-color: rgb(15, 14, 14);
 	color: white;
 	border-radius: 4px;
 }
 .code-link a h6 {
 	font-size: 0.2em;
 	font-weight: 400;
-	padding-top: 10px;
+	padding-top: 4px;
+	padding-left: 10px;
 }
 
 @media (max-width: 991px) {
