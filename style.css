@@ -6,11 +6,10 @@
 	font-family: "Poppins", sans-serif;
 }
 header {
-	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 40px 100px;
+	padding-top: 40px;
 	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
@@ -19,6 +18,7 @@ header {
 header .logo {
 	color: #fff;
 	text-transform: uppercase;
+	z-index: 1000;
 }
 .toggle {
 	position: relative;
@@ -42,8 +42,9 @@ header .logo {
 	right: 0;
 	width: 100%;
 	min-height: 100vh;
-	padding: 100px;
+	padding: 0 100px;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	background: #111;
@@ -116,8 +117,13 @@ header .logo {
 .text a:hover {
 	letter-spacing: 6px;
 }
+#social-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
 .social {
-	position: absolute;
+	/*position: absolute;*/
 	z-index: 10;
 	bottom: 20px;
 	display: flex;
@@ -222,7 +228,7 @@ header .logo {
 
 .code-link img {
 	max-width: 1em;
-	max-height:1em;
+	max-height: 1em;
 	filter: invert(1);
 }
 .code-link a {
@@ -269,11 +275,55 @@ header .logo {
 		justify-content: center;
 	}
 	.about {
-		width: 80%;
+		width: 76%;
+		text-align: center;
+		align-self: center;
 	}
 	.site-column {
 		justify-content: center;
 		margin-left: auto;
 		margin-right: auto;
+		max-width: ma;
+	}
+}
+
+@media (max-width: 581px) {
+	.showcase,
+	.showcase header {
+		padding: 40px;
+	}
+	.text h2 {
+		font-size: 3em;
+	}
+	.text h3 {
+		font-size: 2em;
+	}
+	#works {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.photo-box a {
+		justify-content: center;
+	}
+	img {
+		justify-content: center;
+	}
+	.about {
+		width: 100%;
+	}
+	.site-column {
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: max-content;
+	}
+	.social li {
+		list-style: none;
+		width: 100px;
+	}
+	.social-bar {
+		display: flex;
+
+		max-width: 50%;
 	}
 }
