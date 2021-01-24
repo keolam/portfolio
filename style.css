@@ -5,6 +5,12 @@
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 }
+html,
+body {
+	min-width: 454px;
+	width: 100%;
+}
+
 header {
 	top: 0;
 	left: 0;
@@ -123,7 +129,6 @@ header .logo {
 	justify-content: flex-start;
 }
 .social {
-	/*position: absolute;*/
 	z-index: 10;
 	bottom: 20px;
 	display: flex;
@@ -266,7 +271,6 @@ header .logo {
 	#works {
 		flex-direction: column;
 		justify-content: center;
-		/*max-width: 10%;*/
 	}
 	.photo-box a {
 		justify-content: center;
@@ -292,6 +296,9 @@ header .logo {
 	.showcase header {
 		padding: 40px;
 	}
+	header .logo {
+		text-align: center;
+	}
 	.text h2 {
 		font-size: 3em;
 	}
@@ -302,6 +309,7 @@ header .logo {
 		flex-direction: column;
 		justify-content: center;
 	}
+
 	.photo-box a {
 		justify-content: center;
 	}
@@ -328,15 +336,25 @@ header .logo {
 	}
 }
 
-@media (max-width: 429px) {
-	.showcase {
-		min-width: 428px;
-		padding: 10px;
-		width: 428px;
+@media (max-width: 497px) {
+	html,
+	.body {
+		min-width: 454px;
+		width: 100%;
+	}
+	.showcase,
+	.showcase header {
+		min-width: 496px;
+		padding: 48px;
+	}
+	.site-column {
+		max-width: min-content;
 	}
 	.text p {
 		max-width: 80%;
 		margin-left: auto;
+		margin-right: auto;
+		padding: 10px 30px;
 	}
 	.text h2 {
 		font-size: 2em;
